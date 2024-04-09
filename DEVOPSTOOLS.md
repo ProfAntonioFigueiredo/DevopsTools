@@ -1,6 +1,6 @@
 ### Containers
 
-- [✔️] 🏗️ 01 > [Introdução a Conatiners e Docker](Docker/Introducao.md)
+- [✔️] 🏗️ 01 > [Introdução a Containers e Docker](Docker/Introducao.md)
 - [✔️] 🏗️ 02 > [Instalaçao do Docker](InstalacaodoDocker.md)
 - [✔️] 🏗️ 03 > [Primeiros passos com Docker](PrimeirospassoscomDocker.md)
 - [✔️] 🏗️ 04 > [Desafio - Docker Primeiros Passos](Desafioprimeirospassos.md)
