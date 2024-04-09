@@ -5,7 +5,7 @@
 - 🏗️ 03 > [Primeiros passos com Docker](PrimeirospassoscomDocker.md)
 - 🏗️ 04 > [Desafio - Docker Primeiros Passos](Desafioprimeirospassos.md)
 - 🏗️ 05 > [Executado a sua primeira Aplicação em Containers](Executandosuaprimeiraaplicacaoemcontainer.md)
-- [✔️] 🏗️ 06 > [Primeiros passos com Docker Image](Docker-Dockerfile.md)
+- [✔️] 🏗️ 06 > [Primeiros passos com Docker Image](Docker/Docker-Dockerfile.md)
 - 🏗️ 07 > [Avançando em Imagens Dcoker com DockerFile](AvançandoemImagensDcokercomDockerFile.md)
 - 🏗️ 08 > [Docker Registry](DockerRegistry.md)
 - 🏗️ 09 > [Algumas boas práticas pra construção de Imagem](AlgumasboaspráticaspraconstruçãodeImagem.md)
