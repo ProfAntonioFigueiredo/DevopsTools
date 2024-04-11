@@ -4,5 +4,3 @@ FROM ubuntu
 
 RUN adduser -h /home/pf1776 -s /bin/bash -D pf1776
 USER pf1776
-
-

@@ -6,6 +6,6 @@ LABEL Image="Imagem  de Teste" \
       Author="Antonio Figueiredo" \
       Version="1.0" \
       Description="Essa é uma imagem para testes." \
-      E-mail ="profantonio.figueiredo@fiap.com"
+      E-mail="profantonio.figueiredo@fiap.com"
 
 

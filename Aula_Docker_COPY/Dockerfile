@@ -8,3 +8,5 @@ WORKDIR /app
 COPY arquivo-host.json arquivo-host-transferido.json
 ADD https://www.google.com.br pagina.html
 ADD https://stopublicfiles.blob.core.windows.net/frontendfiles/blob.jpeg blob.jpeg 
+ADD https://stopublicfiles.blob.core.windows.net/frontendfiles/index.html index.html
+
