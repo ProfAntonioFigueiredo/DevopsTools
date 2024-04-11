@@ -1,4 +1,5 @@
 ## DOCKER FILE – Possibilidades com DockerFile​
+
 FROM > Inicializa o build de uma imagem a partir de uma imagem base <br/>
 RUN > Executa um comando <br/>
 LABEL > Adiciona metadados a imagem <br/>
@@ -9,12 +10,12 @@ ENV > Define variaveis de ambiente <br/>
 ADD > Copia arquivos ou diretorios ou arquivos remotos e adiciona ao sistema de arquivos da imagem <br/>
 COPY > Copia arquivos ou diretorios e adiciona ao sistema de arquivos da Imagem <br/>
 ENTRYPOINT > Ajuda voce a configurar um container que pode ser executado como um executavel <br/>
-VOLUME > DEfine volumes que devem ser definidos <br/>
+VOLUME > Define volumes que devem ser definidos <br/>
 WORKDIR > Define o seu diretorio corrente <br/>
 
 ##  docker image build -t ubuntu/dockerimage-basic:v1 .
 
-## Inicializa o build de uma magem a partir de uam imagem base, ou seja, Limpa.
+## Inicializa o build de uma imagem a partir de uma imagem base, ou seja, Limpa.
 FROM ubuntu
 
 ## Executa um Comando 
@@ -36,13 +37,13 @@ LABEL Image="Imagem  Docker para o ambiente de Desenvolvimento" \
       Description="Projeto Challenge FIAP turma 2TDSPG 2024." \
       E-mail="profantonio.figueiredo@fiap.com"
 
-## Define variáveis de ambiente
+## Define variáveis de ambiente ( somente como exemplo )
 ENV MYSQL_USER=fiap \
     MYSQL_PASSWORD=docker12 \
     MYSQL_DATABASE=fiap_db \
     MYSQL_ROOT_PASSWORD=Fiap2tds@2024
 
-## Defini volumes que devem ser definitivos  (persistentes)   
+## Defini volumes que devem ser definitivos (persistentes)   
 VOLUME /DEV
 
 ## Define que o conatiner precisa expor uma porta em questão
