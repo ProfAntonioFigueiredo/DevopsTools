@@ -1,6 +1,6 @@
 ## DOCKER FILE – Possibilidades com DockerFile​
-FROM > Inicializa o build de uma imagem a partir de uma imagem base ** (\**)
-RUN > Executa um comando ** (\**)
+FROM > Inicializa o build de uma imagem a partir de uma imagem base <br/>
+RUN > Executa um comando <br/>
 LABEL > Adiciona metadados a imagem
 CMD > Define o comndo e/ou os parametros padrao
 EXPOSE > Define que o container precisa expor a porta em questão
