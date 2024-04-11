@@ -1,11 +1,11 @@
 ### Containers
 
-- [✔️] 🏗️ 01 > [Introdução a Containers e Docker](Docker/Introducao.md)
+- [✔️] 🏗️ 01 > [Introdução a Containers e Docker](Container/Docker/Introducao.md)
 - 🏗️ 02 > [Instalaçao do Docker](InstalacaodoDocker.md)
-- 🏗️ 03 > [Primeiros passos com Docker](PrimeirospassoscomDocker.md)
+- 🏗️ 03 > [Primeiros passos com Docker](Container/Docker-Basic-Commands.md)
 - 🏗️ 04 > [Desafio - Docker Primeiros Passos](Desafioprimeirospassos.md)
 - 🏗️ 05 > [Executado a sua primeira Aplicação em Containers](Executandosuaprimeiraaplicacaoemcontainer.md)
-- [✔️] 🏗️ 06 > [Primeiros passos com Docker Image](Docker/Docker-Dockerfile.md)
+- [✔️] 🏗️ 06 > [Primeiros passos com Docker Image](Container/Docker-Dockerfile.md)
 - 🏗️ 07 > [Avançando em Imagens Dcoker com DockerFile](AvançandoemImagensDcokercomDockerFile.md)
 - 🏗️ 08 > [Docker Registry](DockerRegistry.md)
 - 🏗️ 09 > [Algumas boas práticas pra construção de Imagem](AlgumasboaspráticaspraconstruçãodeImagem.md)
