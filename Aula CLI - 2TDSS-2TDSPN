@@ -1,0 +1,64 @@
+az vm create\
+    --resource-group rg-vmubuntu \
+    --name vm-ubuntu \
+    --image Ubuntu2204 \
+    --size Standard_B2s \
+    --vnet-name nnet-linux \
+    --nsg nsgsr-linux \
+    --public-ip-address pip-ubuntu \
+    --authentication-type password \
+    --admin-username admlnx \
+    --admin-password Fiap@2tdsvms
+
+az vm create \
+  --resource-group "rg-vmubuntu" \
+  --name my-vm \
+  --public-ip-sku Standard \
+  --image Ubuntu2204 \
+  --admin-username azureuser \
+  --generate-ssh-keys    
+
+
+az vm extension set \
+  --resource-group "rg-vmubuntu" \
+  --vm-name my-vm \
+  --name customScript \
+  --publisher Microsoft.Azure.Extensions \
+  --version 2.1 \
+  --settings '{"fileUris":["https://raw.githubusercontent.com/MicrosoftDocs/mslearn-welcome-to-azure/master/configure-nginx.sh"]}' \
+  --protected-settings '{"commandToExecute": "./configure-nginx.sh"}'      
+
+  IPADDRESS="$(az vm list-ip-addresses \
+  --resource-group "rg-vmubuntu" \
+  --name my-vm \
+  --query "[].virtualMachine.network.publicIpAddresses[*].ipAddress" \
+  --output tsv)" 
+
+  az network nsg list --resource-group "rg-vmubuntu" --query '[].name' --output tsv
+
+  az network nsg rule list --resource-group "rg-vmubuntu" --nsg-name my-vmNSG
+
+  az network nsg rule list --resource-group "rg-vmubuntu" --nsg-name my-vmNSG --query '[].{Name:name, Priority:priority, Port:destinationPortRange, Access:access}' --output table
+
+  az network nsg rule create --resource-group "rg-vmubuntu" --nsg-name my-vmNSG --name allow-http --protocol tcp --priority 100 --destination-port-range 80 --access Allow
+
+
+## Variaveis do Script
+rg=rg-app-quiz &&
+location=brazilsouth &&
+appServicePlanName=plan-app-quiz &&
+webAppName=appquizpf1776 &&
+codigoFonte=https://github.com/profjoaomenk/jsQuiz.git &&
+sku=F1 &&
+## Cria um novo Grupo de Recursos
+az group create --name $rg --location $location &&
+## Cria um novo Plano de Serviço para o App
+az appservice plan create --name $appServicePlanName \
+--location $location \
+--resource-group $rg \
+--sku $sku &&
+## Cria um novo Servico de Aplicativo
+az webapp create -g rg-app-quiz \
+-p $appServicePlanName \
+-n $webAppName \
+--deployment-source-url  https://github.com/profjoaomenk/jsQuiz.git

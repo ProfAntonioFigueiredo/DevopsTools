@@ -1,0 +1,11 @@
+az vm create\
+    --resource-group rg-vmubuntu \
+    --name vm-ubuntu \
+    --image Canonical:UbuntuServer:19_04-gen2:19.04.201908230 \
+    --size Standard_B2s \
+    --vnet-name nnet-linux \
+    --nsg nsgsr-linux \
+    --public-ip-address pip-ubuntu \
+    --authentication-type password \
+    --admin-username admlnx \
+    --admin-password Fiap@2tdsvms
