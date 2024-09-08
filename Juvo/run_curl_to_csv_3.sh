@@ -33,3 +33,8 @@ while IFS= read -r msisdn; do
   sleep 1
 done < "$msisdn_file"
 
+
+az vm list-ip-addresses --name myVM --resource-group learn-1bb7f8d1-b06e-4a77-9005-017fe7ad2288 --query "[].virtualMachine.network.publicIpAddresses[].ipAddress" --output tsv
+
+
+

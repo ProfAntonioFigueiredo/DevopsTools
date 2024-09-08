@@ -1,0 +1,72 @@
+root@middleware-monitoring:/opt/horuseye/ctl# curl --location 'https://api.juvotimbrazil.com:443/tim/purchases' \
+> --header 'Api-Version: 4' \
+> --header 'Msisdn: 5519982053014' \
+> --header 'Package: tim.lend.br' \
+> --header 'User-Agent: tim' \
+> --header 'Content-Type: application/json' \
+> --header 'Authorization: Basic ZjlDQkRlaERMQm1EYnhkcGpEUmZxVWRXOnpoeENGSm1CbzdNb2NrTUp6TEFCY0F3Tg==' \
+> --data '{
+>     "result": "success",
+>     "amount": "20",
+>     "channel": "8"
+> }' -vvv
+*   Trying 10.174.20.50:443...
+* TCP_NODELAY set
+* Connected to api.juvotimbrazil.com (10.174.20.50) port 443 (#0)
+* ALPN, offering h2
+* ALPN, offering http/1.1
+* successfully set certificate verify locations:
+*   CAfile: /etc/ssl/certs/ca-certificates.crt
+  CApath: /etc/ssl/certs
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256
+* ALPN, server did not agree to a protocol
+* Server certificate:
+*  subject: CN=*.juvo.com
+*  start date: May 27 00:00:00 2024 GMT
+*  expire date: Jun 25 23:59:59 2025 GMT
+*  subjectAltName: host "api.juvotimbrazil.com" matched cert's "*.juvotimbrazil.com"
+*  issuer: C=US; O=Amazon; CN=Amazon RSA 2048 M02
+*  SSL certificate verify ok.
+> POST /tim/purchases HTTP/1.1
+> Host: api.juvotimbrazil.com
+> Accept: */*
+> Api-Version: 4
+> Msisdn: 5519982053014
+> Package: tim.lend.br
+> User-Agent: tim
+> Content-Type: application/json
+> Authorization: Basic ZjlDQkRlaERMQm1EYnhkcGpEUmZxVWRXOnpoeENGSm1CbzdNb2NrTUp6TEFCY0F3Tg==
+> Content-Length: 67
+> 
+* upload completely sent off: 67 out of 67 bytes
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< Server: nginx/1.23.3
+< Date: Tue, 03 Sep 2024 13:46:25 GMT
+< Content-Type: application/json; charset=utf-8
+< Transfer-Encoding: chunked
+< Connection: keep-alive
+< Vary: Accept-Encoding
+< X-Frame-Options: SAMEORIGIN
+< X-XSS-Protection: 1; mode=block
+< X-Content-Type-Options: nosniff
+< X-Download-Options: noopen
+< X-Permitted-Cross-Domain-Policies: none
+< Referrer-Policy: strict-origin-when-cross-origin
+< ETag: W/"42cfe9c151075d901e7282153f2a8fa1"
+< Cache-Control: max-age=0, private, must-revalidate
+< X-Request-Id: 0e6716c9-7063-48de-84f9-a0b70c25bd77
+< X-Runtime: 0.050641
+< Vary: Origin
+< 
+* Connection #0 to host api.juvotimbrazil.com left intact
+{"transaction_id":"67358651725371185289","success":true}
